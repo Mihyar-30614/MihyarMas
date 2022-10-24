@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+:root {
+    --primary-color: #161B33;
+    --secondary-color: #93959c;
+    --info-color: #161B33;
+    --background: #E2E3E5;
+    --icon-size: 24px;
+    --white: #43aa8b;
+    --resume-bg: rgba(32, 80, 96, 0.1);
+}
+
+[data-theme="dark"] {
+    /* :root { */
+    --primary-color: #43aa8b;
+    --secondary-color: #E2E3E5;
+    --info-color: #E2E3E5;
+    --background: #161B33;
+    --icon-size: 24px;
+    --white: #E2E3E5;
+    --resume-bg: rgba(32, 80, 96, 0.2);
+}
+
+html,
+body {
+    /* Prevent scroll on narrow devices */
+    overflow-x: hidden;
+    padding-top: 60px;
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.green-font {
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: clamp(20px, 4vw, 40px);
+}
+
+i {
+    font-size: var(--icon-size);
+    border-radius: 5px;
+    vertical-align: text-bottom;
+}
+
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+        position: fixed;
+        top: 57px;
+        bottom: 0;
+        left: 100%;
+        width: 50%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: var(--background);
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+    .social-media {
+        position: fixed;
+        bottom: 2%;
+    }
+    #email-menu {
+        position: fixed;
+        bottom: 6%;
+    }
+}
+
+.social-media .nav-link {
+    display: inline;
+    padding-right: 5px;
+}
+
+.navbar-nav .nav-link,
+.nav-link:hover,
+.nav-link,
+.navbar-toggler {
+    color: var(--primary-color);
+}
+
+.no-background-image {
+    background-image: none;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--white);
+}
+
+.list-group-item {
+    background-color: var(--background);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.headers {
+    color: var(--white);
+    font-size: clamp(20px, 4vw, 40px);
+    padding-top: 1rem;
+    text-transform: uppercase;
+}
+
+.prime {
+    font-size: clamp(30px, 6vw, 60px);
+}
+
+.spaced-3 {
+    letter-spacing: 3px;
+}
+
+.spaced-2 {
+    letter-spacing: 2px;
+}
+
+.btn.stretched-link,
+#navbar {
+    background-color: var(--background);
+    color: var(--primary-color);
+}
+
+.btn.stretched-link:hover {
+    border-color: var(--background);
+    border-width: 2px;
+}
+
+#email-menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: x-large;
+    text-transform: capitalize;
+}
+
+.resume-skills {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.resume-skills p {
+    padding: 0;
+    margin: 0;
+    color: var(--info-color)
+}
+
+.resume-container li {
+    float: left;
+    padding: 16px;
+    display: block;
+    color: var(--info-color);
+}
+
+.resume-container {
+    background-color: var(--resume-bg);
+    border-radius: 5px;
+    color: var(--secondary-color);
+}
+
+.resume-container i {
+    font-size: 50px;
+}
+
+.resume-skill {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+.skill-desc {
+    display: block;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    vertical-align: text-bottom;
+    border-radius: 5px;
+}
+
+.btn-cta {
+    background: transparent;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    border: 3px solid var(--secondary-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 800;
+    font-size: 20px;
+    box-shadow: 0 0 0 var(--secondary-color);
+    transition: ease-in .5s;
+}
+
+.btn-cta span {
+    color: var(--primary-color);
+    transition: ease-in-out .5s;
+}
+
+.btn-cta:hover {
+    box-shadow: 0 0 20px var(--secondary-color), inset 300px 0 var(--secondary-color)
+}
+
+.btn-cta:hover span {
+    color: var(--primary-color);
+}
+
+
+/* Time Line Style */
+
+.main-timeline {
+    position: relative
+}
+
+.main-timeline:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: var(--white);
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-timeline .timeline {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.main-timeline .timeline:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.main-timeline .icon {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.main-timeline .icon:before,
+.main-timeline .icon:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.33s ease-out 0s;
+}
+
+.main-timeline .icon:before {
+    background: var(--white);
+    border: 2px solid var(--background);
+    left: -3px;
+}
+
+.main-timeline .icon:after {
+    border: 2px solid var(--white);
+    left: 3px;
+}
+
+.main-timeline .timeline:hover .icon:before {
+    left: 3px;
+}
+
+.main-timeline .timeline:hover .icon:after {
+    left: -3px;
+}
+
+.main-timeline .date-content {
+    width: 50%;
+    float: left;
+    margin-top: 22px;
+    position: relative;
+}
+
+.main-timeline .date-content:before {
+    content: "";
+    width: 36.5%;
+    height: 2px;
+    background: var(--white);
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+}
+
+.main-timeline .date-outer {
+    width: 125px;
+    height: 125px;
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    z-index: 1
+}
+
+.main-timeline .date-outer:before,
+.main-timeline .date-outer:after {
+    content: "";
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.33s ease-out 0s;
+}
+
+.main-timeline .date-outer:before {
+    background: var(--primary-color);
+    border: 2px solid var(--background);
+    left: -6px;
+}
+
+.main-timeline .date-outer:after {
+    border: 2px solid var(--white);
+    left: 6px;
+}
+
+.main-timeline .timeline:hover .date-outer:before {
+    left: 6px;
+}
+
+.main-timeline .timeline:hover .date-outer:after {
+    left: -6px;
+}
+
+.main-timeline .date {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 27%;
+    left: 0;
+    color: var(--white);
+}
+
+.main-timeline .month {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.main-timeline .year {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--background);
+    line-height: 36px
+}
+
+.main-timeline .timeline-content {
+    width: 50%;
+    padding: 20px 0 20px 50px;
+    float: right
+}
+
+.main-timeline .title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+    color: var(--white);
+}
+
+.main-timeline .description {
+    margin-bottom: 0;
+    color: var(--white);
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content {
+    float: right
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content:before {
+    left: 10px
+}
+
+.main-timeline .timeline:nth-child(2n) .timeline-content {
+    padding: 20px 50px 20px 0;
+    text-align: right
+}
+
+
+/*Simple css to style it like a toggle switch*/
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: top;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 60px;
+    top: -6px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 2px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
