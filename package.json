@@ -1,0 +1,28 @@
+{
+    "name": "mihyarmas",
+    "version": "1.0.0",
+    "description": "",
+    // "main": "index.js",
+    "scripts": {
+        "run": "",
+        "build": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Mihyar-30614/MihyarMas.git"
+    },
+    "keywords": [
+        "Mihyar",
+        "Al",
+        "Masalma",
+        "Software",
+        "Developer",
+        "Software Engineer"
+    ],
+    "author": "Mihyar Al Masalma",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Mihyar-30614/MihyarMas/issues"
+    },
+    "homepage": "https://github.com/Mihyar-30614/MihyarMas#readme"
+}
